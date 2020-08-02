@@ -17,7 +17,7 @@ const rotateText = (
   source.innerHTML = rotatingTextArray[0];
 
   // default speed
-  speed != undefined ? speed : speed = 2000; 
+  speed != undefined ? speed : (speed = 2000);
 
   // sync timeout with fade class
   const timeoutFadeSync: number = speed / 3;
