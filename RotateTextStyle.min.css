@@ -1,1 +1,1 @@
-.rotating-text{opacity:1;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}.rotating-text.fade{opacity:0;-webkit-transition:opacity .5s;-moz-transition:opacity .5s;-o-transition:opacity .5s;transition:opacity .5s}
+:root{--trans-speed:.67s}.rotating-text{opacity:1;-webkit-transition:opacity var(--trans-speed);-moz-transition:opacity var(--trans-speed);-o-transition:opacity var(--trans-speed);transition:opacity var(--trans-speed)}.rotating-text.fade{opacity:0}
