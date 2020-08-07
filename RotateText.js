@@ -2,10 +2,10 @@ var rotatingTextArray = [];
 var source = document.querySelector(".rotating-text");
 var root = document.documentElement;
 var rotateText = function (_a) {
-    var _b = _a === void 0 ? { content: [], speed: 2000 } : _a, content = _b.content, speed = _b.speed;
-    rotatingTextArray = content;
+    var speed = (_a === void 0 ? { speed: 2000 } : _a).speed;
+    rotatingTextArray = source.innerHTML.split(",");
     source.innerHTML = rotatingTextArray[0];
-    speed != undefined ? speed : speed = 2000;
+    speed != undefined ? speed : (speed = 2000);
     var timeoutFadeSync = speed / 3;
     var transTime = ((timeoutFadeSync % 60000) / 1000).toFixed(2);
     root.style.setProperty("--trans-speed", transTime + "s");

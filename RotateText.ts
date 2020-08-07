@@ -1,5 +1,4 @@
 interface Options {
-  content?: string[];
   speed?: number;
 }
 
@@ -9,10 +8,8 @@ let rotatingTextArray: string[] = [];
 const source: Element = document.querySelector(".rotating-text");
 let root = document.documentElement;
 
-const rotateText = (
-  { content, speed }: Options = { content: [], speed: 2000 }
-) => {
-  rotatingTextArray = content;
+const rotateText = ({ speed }: Options = { speed: 2000 }) => {
+  rotatingTextArray = source.innerHTML.split(",");
   // Set element with first entry in array to begin with
   source.innerHTML = rotatingTextArray[0];
 
